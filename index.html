@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Patrick+Hand&family=Patua+One&family=Poppins&family=Roboto&family=Roboto+Mono:wght@100&family=Roboto+Slab:wght@300&family=Rubik+Moonrocks&family=Signika+Negative:wght@300&family=Slabo+27px&family=Sriracha&family=Staatliches&family=Tiro+Kannada&family=Ubuntu:wght@300&family=Xanh+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- CSS ------------------------------------------------------------------>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+
+<!-- ------------------   HUMBERGUR MENU CONTENT  ------------------ -->
+
+
+<div class="responsive">
+    <div class="menu-box" id="menu_box">
+
+        <div class="icons-container">
+            <i class="fa-solid fa-house" class="icon"></i><span>Home</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-hashtag" class="icon"></i><span>Explore</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-bell" class="icon"></i><span>Notifications</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-envelope" class="icon"></i><span>Messages</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-bookmark" class="icon"></i><span>Bookmarks</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-list-ul" class="icon"></i><span>Lists</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-user" class="icon"></i><span>Profile</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-ellipsis" class="icon"></i><span>More</span>
+        </div>
+        <br>
+        <button id="tweet">Tweet</button>
+    </div>
+
+    <div id="display" onclick="close_menu_touch_on_screen()">
+
+   </div>
+
+
+</div>
+
+
+<div class="bottom-bar">
+    <a href="index.html" style="color: var(--text-white);"><i class="fa-solid fa-house" id="icon"></i></a>
+    <a href="firstPage.html" style="color: var(--text-white);"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <i class="fa-regular fa-bell" id="icon"></i>
+    <a href="inbox.html" style="color: var(--text-white);"><i class="fa-regular fa-envelope" id="icon"></i></a>
+</div>
+
+
+
+    <!----------------------   First Section   ---------------------------------------------------------------->
+    <div class="first_section">
+        <i class="fa-brands fa-twitter" style="font-size: 30px; margin-top: 10px;margin-left: 20px;"></i>
+<br>
+        <div class="icons-container">
+            <i class="fa-solid fa-house" class="icon"></i><span id="home">Home</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-hashtag" class="icon"></i><span id="explore">Explore</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-bell" class="icon"></i><span id="notification">Notifications</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-envelope" class="icon"></i><span id="message">Messages</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-bookmark" class="icon"></i><span>Bookmarks</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-list-ul" class="icon"></i><span>Lists</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-user" class="icon"></i><span>Profile</span>
+        </div>
+        <div class="icons-container">
+            <i class="fa-solid fa-ellipsis" class="icon"></i><span>More</span>
+        </div>
+        <br>
+        <button id="tweet">Tweet</button>
+<br><br>
+        <div style="display: flex;flex-direction: row;justify-content: space-around;">
+            <img src="profile.jpg" style="height: 50px;border-radius: 50%;">
+            <div>
+                <p style="font-size: 15px;letter-spacing:1px;"><b>Manish Thakur</b></p>
+                <p style="font-size: 13.5px;color: gray;">@manish_thakur231690</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div class="second_section"><!--------------------- Second Section ---------------------------------------------------->
+<!-- HEADER -->
+        <div id="header">
+            <div id="profile"><img src="profile.jpg" height="100%" style="border-radius: 50%;"></div><span id="heading-name">Home</span><i class="fa-regular fa-moon" id="darkmode" style="font-size: 20px;"></i>
+        </div>
+<!-- HEADER -->
+
+<div id="post_container"><!--------------------- START POST CONTAINER ---------------------------------------------------->
+
+<!-- POST-1   -->
+<div class="post-content">
+    <div class="post"><img src="post1.jpeg" style="height: 100%;border-radius: 50%;"></div>
+        <div class="content">
+                <div style="display: flex;flex-direction: row;align-items: center;">
+                <p><b>Incredible India</b></p><img src="kindpng_230784.png" height="16px" style="margin-left: 5px;"><p style="color: gray;margin-left: 5px;"> @india</p>
+                </div>
+                <p style="font-size: 13.5px;letter-spacing: 0.5px;">With a rich heritage and myriad attractions, the <span style="color: rgb(65, 144, 255);">#country</span> is among the most popular tourist destinations in the world.</p>
+                <img src="image1.jpg" style="border-radius: 10px; width: 100%;margin-top: 10px;border: 1px solid rgba(128, 128, 128, 0.616);">
+                <br>
+                <div class="like_comment">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-retweet"></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+        </div>
+</div>
+
+
+<!-- POST-2   -->
+<div class="post-content">
+    <div class="post"><img src="post1.jpeg" style="height: 100%;border-radius: 50%;"></div>
+    <div class="content">
+        <div style="display: flex;flex-direction: row;align-items: center;">
+        <p><b>Incredible India</b></p><img src="kindpng_230784.png" height="16px" style="margin-left: 5px;"><p style="color: gray;margin-left: 5px;"> @india</p>
+        </div>
+        <p style="font-size: 13.5px;letter-spacing: 0.5px;">With a rich heritage and myriad attractions, the <span style="color: rgb(65, 144, 255);">#country</span> is among the most popular tourist destinations in the world.</p>
+        <img src="image2.jpg" style="border-radius: 10px; width: 100%;margin-top: 10px;border: 1px solid rgba(128, 128, 128, 0.614);">
+        <br>
+        <div class="like_comment">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- POST-3   -->
+<div class="post-content">
+    <div class="post"><img src="post2.jpg" style="height: 100%;border-radius: 50%;"></div>
+    <div class="content"> 
+        <div style="display: flex;flex-direction: row;align-items: center;">
+        <p><b>Apple</b></p><img src="kindpng_230784.png" height="16px" style="margin-left: 5px;"><p style="color: gray;margin-left: 5px;"> @apple</p>
+        </div>
+        <p style="font-size: 13.5px;letter-spacing: 0.5px;">There's an <span style="color: rgb(82, 125, 254);">#iPad</span> for  everyone.</p>
+        <img src="image4.jpg" style="border-radius: 10px; width: 100%;margin-top: 10px;border: 1px solid rgba(128, 128, 128, 0.623);">
+        <br>
+        <div class="like_comment">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- POST-4   -->
+<div class="post-content">
+    <div class="post"><img src="post3.png" style="height: 100%;border-radius: 50%;"></div>
+    <div class="content">
+        <div style="display: flex;flex-direction: row;align-items: center;">
+        <p><b>Samsung</b></p> <img src="kindpng_230784.png" height="16px" style="margin-left: 5px;"><p style="color: gray;margin-left: 5px;">@samsung_india</p>
+        </div>
+        <p style="font-size: 13.5px;letter-spacing: 0.5px;">The arrival of <span style="color: rgb(86, 128, 255);">Galaxy</span>  Z Flip3 Bespoke Edition, the Watch4 Bespoke Studio and a brand new collaboration with Maison.</p>
+        <img src="image6.jpeg" style="border-radius: 10px; width: 100%;margin-top: 10px;border: 1px solid rgba(128, 128, 128, 0.605);">
+        <br>
+        <div class="like_comment">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- POST-5   -->
+<div class="post-content">
+    <div class="post"><img src="post2.jpg" style="height: 100%;border-radius: 50%;"></div>
+    <div class="content">
+        <div style="display: flex;flex-direction: row;align-items: center;">
+        <p><b>Apple</b></p><img src="kindpng_230784.png" height="16px" style="margin-left: 5px;"><p style="color: gray;margin-left: 5px;"> @apple_india</p>
+        </div>
+        <p style="font-size: 13.5px;letter-spacing: 0.5px;">The arrival of <span style="color: rgb(86, 154, 255);">#iphone 13</span> Bespoke Edition, the Watch Bespoke Studio and a brand new collaboration with Maison.</p>
+        <img src="image5.jpg" style="border-radius: 10px; width: 100%;margin-top: 10px;border: 1px solid rgba(128, 128, 128, 0.594);">
+        <br>
+        <div class="like_comment">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+    </div>
+</div>
+
+
+</div> <!----------------------  END Post Container   ---------------------------------------------------------------->
+  
+
+
+
+
+
+<!----------------------  Start Explore Container   ---------------------------------------------------------------->
+  
+<div id="explore-container" >
+    
+<div class="explore-container">
+    <ul>
+        <li style="color: rgb(54, 161, 249);border-bottom: 3.5px solid rgb(59, 151, 255);">For.you</li>
+        <li>Trending</li>
+        <li>World.Cup</li>
+        <li>Sports</li>
+        <li>News</li>
+        <li>Entertainment</li>
+    </ul>
+    
+</div>
+    
+   
+    <div class="trending">
+        <div style="position: relative;top: 75%;">
+            <p>Sports . LIVE</p>
+            <h3>2022 FIFA World Cup</h3>
+        </div>
+    </div>
+    <br>
+    
+    <div style="padding: 0 10px; padding-bottom: 50px;">
+    
+    <div style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div>
+            <p style="color: rgb(109, 108, 108);font-size: 13px;">Sports . LIVE</p>
+            <p>2022 FIFA World Cup</p>
+        </div>
+        <img src="fifa.jpeg" style="height: 70px;border-radius: 10px;">
+    </div>
+    <br>
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Trending in India</p>
+                        <p style="letter-spacing: 0.5px; " class="hash-news">#flipcart</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">10.5k tweet</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div><br>
+    
+    
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Entertainment . Trending</p>
+                        <p style="letter-spacing: 0.5px; " class="hash-news">#BoycottPathan</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">10.5k tweet</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div><br>
+    
+    
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Entertainment . Trending</p>
+                        <p style="letter-spacing: 0.5px; " class="hash-news">#KiaraAdvani</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">23.5k tweet</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div><br>
+    
+    
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Sports . Trending</p>
+                        <p style="letter-spacing: 0.5px; " class="hash-news">#SachinTendulkar</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">Trending with <span style="color: rgb(100, 139, 255);">#ArjunTendulkar</span> </p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div><br>
+    
+    
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Trending in India</p>
+                        <p style="letter-spacing: 0.5px; " class="hash-news">#IndianArmyRocks</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">5,300 tweet</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div><br>
+    
+    
+                <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                    <div>
+                        <p style="color: rgb(110, 109, 109);font-size: 13px;">Trending in India</p>
+                        <p style="letter-spacing: 0.5px;" class="hash-news">#AcidAttack</p>
+                        <p style="color: rgb(108, 106, 106);font-size: 13px;">1,354 tweet</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+                </div>
+    
+    </div>
+
+
+</div>
+
+
+
+
+<!----------------------  End Explore Container   ---------------------------------------------------------------->
+  
+
+
+<!-- -------------    Start Message    ------------------------------ -->
+
+
+<div id="message-container">
+
+<div class="content"><br><br>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;letter-spacing: 0.5px;">Welcome to your <br> inbox!</h1>
+    <p style="color: rgb(89, 88, 88);font-size: 14px;margin-top: 5px;">Drop a line, share Tweet and more with private conversation between you and other on Twitter.</p>
+    <button id="tweet2">Write a Tweet</button>
+</div>
+
+
+<div  id="content-two">
+<div id="msg_box">
+    <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding-bottom: 15px;">
+        <i class="fa-solid fa-xmark" style="font-size: 20px;" id="close_btn"></i><h3>New message</h3><button id="next">Next</button>
+    </div>
+    <i class="fa-solid fa-magnifying-glass" style="font-size: 15px; color: rgb(52, 164, 255);"></i><input type="text" placeholder="Search people">
+    <div style="height: 0.5px;width: 100%;background-color: rgba(128, 128, 128, 0.432);margin-top: 2px;"></div>
+</div>
+</div>
+
+
+</div>
+
+<!-- -------------    END Message    ------------------------------ -->
+
+
+
+
+
+
+
+
+<!-- -------------    Start Notification    ------------------------------ -->
+
+<div id="notfication-container">
+
+ <img src="verification-check-800x400.v1.52677a99.png" width="90%">
+ <p style="font-family: sans-serif; font-size: 33px;font-weight: bold;margin-top: 30px;" >Nothing to see here — <br> yet</p><br>
+ <p style="color: rgb(79, 79, 79);line-height: 20px;font-size: 15px;">Likes, mentions, Retweets, and a whole lot more — when it comes from a verified account, you'll find it here. <u><b>Learn more</b></u></p>
+
+</div>
+
+
+
+<!-- -------------      End  Notification    ------------------------------ -->
+
+
+
+
+
+
+
+
+
+</div> <!----------------------  END Second Section   ---------------------------------------------------------------->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------   Third Section   ---------------------------------------------------------------->
+
+    <div class="third_section">
+        <input type="search" placeholder="Search Twitter" id="search">
+
+        <div class="whats_new">
+            <h3 style="font-family: Arial, Helvetica, sans-serif;font-size: 21px;">What's happening</h3>
+            <br>
+
+            <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                <div>
+                    <p style="color: gray;font-size: 12.5px;">Sports . LIVE</p>
+                    <p>2022 FIFA World Cup</p>
+                </div>
+                <img src="fifa.jpeg" style="height: 70px;border-radius: 10px;">
+            </div>
+<br>
+            <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                <div>
+                    <p style="color: gray;font-size: 12.5px;">Trending in India</p>
+                    <p style="letter-spacing: 0.5px;">#flipcart</p>
+                    <p style="color: gray;font-size: 12.5px;">10.5k tweet</p>
+                </div>
+                <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+            </div>
+<br>
+            <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                <div>
+                    <p style="color: gray;font-size: 12.5px;">Trending in India</p>
+                    <p style="letter-spacing: 0.5px;">#IND vs BAN</p>
+                    <p style="color: gray;font-size: 12.5px;">14.7k tweet</p>
+                </div>
+                <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+            </div>
+            <br>
+            <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                <div>
+                    <p style="color: gray;font-size: 12.5px;">Politics . trending </p>
+                    <p style="letter-spacing: 0.5px;">#Pappu</p>
+                    <p style="color: gray;font-size: 12.5px;">25.7k tweet</p>
+                </div>
+                <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+            </div>
+
+
+            <br>
+            <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                <div>
+                    <p style="color: gray;font-size: 12.5px;">Sports . trending in india</p>
+                    <p style="letter-spacing: 0.5px;">#arjuntendulkar</p>
+                    <p style="color: gray;font-size: 12.5px;">trending with <span style="color: rgb(63, 149, 255);">#sachintendulkar</span></p>
+                </div>
+                <i class="fa-solid fa-ellipsis" style="color: gray;"></i>
+            </div>
+    
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!--------------- Container END   ---------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+//  Responsive Menu-bar
+
+let menu_box = document.getElementById("menu_box");
+let menu_icon = document.getElementById("profile");
+menu_icon.onclick= function(){
+        menu_box.classList.toggle("open-menu");
+    }
+
+    function close_menu_touch_on_screen(){
+        let menu_box  = document.getElementById("menu_box").style.display;
+        if(menu_box=="block"){
+            document.getElementById("menu_box").style.display = "none";
+        }
+    }
+
+//  DarkMode to Light Mode
+// border: 2px solid var(--text-white);border-radius: 50%; padding: 3px;
+
+ var light = document.getElementById("darkmode");
+    light.onclick= function(){
+        document.getElementById("darkmode").className = "fa-solid fa-moon";
+        document.body.classList.toggle("lighttheme");
+    }
+
+// Click to display none _HOME_ 
+
+let home_btn =  document.getElementById("home");
+home_btn.onclick = function(){
+    document.getElementById("heading-name").innerHTML = "Home";
+    document.getElementById("post_container").style.display = "block";
+    document.getElementById("explore-container").style.display = "none";
+    document.getElementById("message-container").style.display = "none";
+    document.getElementById("notfication-container").style.display = "none";
+}
+// Click to display none _Explore_ 
+
+let explore_btn =  document.getElementById("explore");
+explore_btn.onclick = function(){
+    document.getElementById("heading-name").innerHTML = "Explore";
+    document.getElementById("explore-container").style.display = "block";
+    document.getElementById("post_container").style.display = "none";
+    document.getElementById("message-container").style.display = "none";
+    document.getElementById("notfication-container").style.display = "none";
+}
+
+// click to _Message_ box
+
+
+let msg_btn =  document.getElementById("message");
+msg_btn.onclick = function(){
+    document.getElementById("heading-name").innerHTML = "Message";
+    document.getElementById("message-container").style.display = "block";
+    document.getElementById("post_container").style.display = "none";
+    document.getElementById("explore-container").style.display = "none";
+    document.getElementById("notfication-container").style.display = "none";
+}
+
+
+var tweet_btn = document.getElementById("tweet2");
+    tweet_btn.onclick = function(){
+        document.getElementById("content-two").style.display = "flex";
+        document.body.style.backgroundColor = "gray";
+        document.getElementById("header").style.backgroundColor = "gray";
+        document.getElementById("bottom-bar").style.backgroundColor = "gray";
+    }
+
+    var close_btn  = document.getElementById("close_btn");
+    close_btn.onclick = function(){
+        document.getElementById("content-two").style.display = "none";
+        document.body.style.backgroundColor = "var(--black-background)";
+        document.getElementById("header").style.backgroundColor = "var(--header-bg)";
+        document.getElementById("bottom-bar").style.backgroundColor = "white";
+    }
+
+
+
+// click to _Notification_ box
+
+var notification = document.getElementById("notification");
+notification.onclick  = function() {
+    document.getElementById("heading-name").innerHTML = "Notification";
+    document.getElementById("notfication-container").style.display = "block";
+    document.getElementById("post_container").style.display = "none";
+    document.getElementById("explore-container").style.display = "none";
+    document.getElementById("message-container").style.display = "none";
+}
+
+
+
+
+</script> 
+
+
+</body>
+</html>

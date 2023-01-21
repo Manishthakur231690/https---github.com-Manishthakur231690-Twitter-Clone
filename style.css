@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: linear 0.1s;
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--black-background);
+    color: var(--text-white);
+}
+:root{
+    --black-background: rgb(255, 255, 255);
+    --text-white: rgb(0, 0, 0);
+    --icon-hover:rgba(224, 224, 224, 0.774);
+    --search-bg: rgba(200, 200, 200, 0.418);
+    --header-bg:rgba(255, 255, 255, 0.909);
+}
+.lighttheme{
+    --black-background: rgb(0, 0, 0);
+    --text-white:white;
+    --icon-hover:rgba(54, 54, 54, 0.587);
+    --search-bg: rgba(77, 78, 83, 0.361);
+    --header-bg:rgba(0, 0, 0, 0.930);
+}
+
+
+/************************  Container  ******************************/
+.container{
+    padding: 0 8%;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+.menu-box{
+    display: none;
+}
+.first_section{
+    height: 100vh;
+    flex-basis: 23%;
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+    padding: 0px 50px 0px 0px;
+}
+.second_section{
+    flex-basis: 50%;
+    border: 0.5px solid rgba(136, 136, 136, 0.281);
+}
+.third_section{
+    height: 100vh;
+    flex-basis: 30%;
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+}
+.icons-container{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    padding: 10px 5px 10px 20px;
+}
+.icons-container:hover{
+    border-radius: 50px;
+    background-color: var(--icon-hover);
+}
+.icons-container  i{
+    font-size: 23px;
+}
+.icons-container span{
+    margin-left: 20px;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+}
+.icons-container span:hover{
+    color: royalblue;
+    cursor: pointer;
+}
+#tweet{
+    border-radius: 50px;
+    background-color: rgb(45, 147, 255);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    color: rgb(253, 251, 251);
+    width: 100%;
+}
+#tweet:hover{
+    box-shadow: .1px .1px 5px 0.1px rgb(80, 119, 238);
+    cursor: pointer;
+}
+
+
+
+/***********************    RESPONSIVE    **********************************************************************/
+#display{
+    display: none;
+}
+
+
+.bottom-bar{display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:750px){
+
+.container{
+        padding: 0 1%;
+        width: 100vw;
+}
+.first_section{
+    display: none;
+    flex-basis: 0;
+}
+.second_section{
+    flex-basis: 100%;
+}
+.third_section{
+    display: none;
+    flex-basis: 0%;
+}
+
+
+/* Humberger Menu */
+.responsive{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.open-menu{
+    display: block;
+}
+.menu-box{
+    background-color: var(--header-bg);
+    height: 100vh;
+    width: 75vw;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    bottom: 0;
+    padding: 10px 15px 10px 15px;
+}
+#display{
+    height: 100vh;
+    width: 25vw;
+    position: fixed;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0);
+    display: block;
+}
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--black-background);
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.bottom-bar{
+    font-size: 23px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************    SECOND SECTION    ******************************* */
+
+/***********************    Posts Container    ***************************/
+#profile{
+    height: 40px;
+    display: none;
+}
+
+#header{
+    position: sticky;
+    top: 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid rgba(76, 76, 76, 0.183);
+}
+#header span{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.post-content{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(118, 116, 116, 0.135);
+}
+.post{
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.content{
+    padding-left: 15px;
+}
+.like_comment{
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/***********************    Posts Container    ***************************/
+
+
+
+
+
+/**************   Explore Container    *************************************** */
+
+
+#post_container{
+    display: block;
+}
+
+#explore-container{
+    display: none;
+}
+.explore-container{
+    padding:0 0;
+    position: sticky;
+    top: 35px;
+    background-color: var(--black-background);
+}
+.explore-container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.explore-container ul li{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 5px;
+}
+.explore-container ul li:hover{
+    cursor: pointer;
+    color: rgb(61, 174, 255);
+    border-bottom: 3.5px solid rgb(63, 169, 255);
+}
+.trending{
+    padding: 0px 2vw;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top , rgba(0, 0, 0, 0.664),rgba(0, 0, 0, 0.112)), url(fifa-football.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+.trending p{
+    font-size: 16px;
+}
+.trending h3{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.hash-news{
+    font-size: 20px;
+}
+
+
+
+
+/********************** RESPONSIVE  ********************************************* */
+
+@media screen and (max-width:750px){
+
+    #explore-container{
+        display: none;
+    }
+    #post_container{
+        display: block;
+    }
+
+}
+
+
+
+
+/**************   Explore Container    *************************************** */
+
+
+
+
+
+/**************   Messages Container    *************************************** */
+
+#message-container{
+    display: none;
+    padding: 10px 20px;
+}
+#tweet2{
+    border-radius: 50px;
+    background-color: rgb(12, 162, 255);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    color: rgb(253, 251, 251);
+    width: 30%;
+    margin-top: 25px;
+}
+#tweet2:hover{
+    box-shadow: .1px .1px 5px 0.1px rgb(12, 113, 255);
+    cursor: pointer;
+}
+
+
+#content-two{
+    padding: 10px 50px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#content-two #msg_box{
+        width: 550px;
+        height: 500px;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 80px;
+}
+#content-two #msg_box input{
+    padding: 5px;
+    font-size: 15px;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+#next{
+    background-color: rgb(173, 173, 173);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 8px 15px; 
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    border: none;
+}
+#next:active{
+    background-color: gray;
+}
+
+
+
+
+/**************   Messages Container    *************************************** */
+
+
+
+
+
+
+/**************  Notification Container    *************************************** */
+
+#notfication-container{
+    display: none;
+    padding: 80px 20%;
+}
+
+
+
+
+
+/**************  Notification Container    *************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************* RESPONSIVE  ********************************************* */
+@media screen and (max-width:750px){
+
+#profile{
+    display:block;
+    height: 40px;
+    cursor: pointer;
+}
+}
+/******************** RESPONSIVE  ********************************************* */
+
+
+
+
+
+
+
+
+
+/***********************    THIRD SECTION    ******************************* */
+.third_section{
+    padding: 10px 20px;
+}
+#search{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--search-bg);
+    border: none;
+    border-radius: 50px;
+}
+.whats_new{
+     background-color: var(--search-bg);
+     height: 520px;
+     border-radius: 15px;
+     margin-top: 20px;
+     padding: 15px;
+}

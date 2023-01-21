@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Inbox</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Patrick+Hand&family=Patua+One&family=Poppins&family=Roboto&family=Roboto+Mono:wght@100&family=Roboto+Slab:wght@300&family=Rubik+Moonrocks&family=Signika+Negative:wght@300&family=Slabo+27px&family=Sriracha&family=Staatliches&family=Tiro+Kannada&family=Ubuntu:wght@300&family=Xanh+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   
+</head>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: linear 0.1s;
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--black-background);
+    color: var(--text-white);
+}
+#bottom-bar{
+    display: none;
+}
+
+#profile{
+    display:block;
+    height: 40px;
+    cursor: pointer;
+}
+.header{
+    position: sticky;
+    top: 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.247);
+    z-index: 0;
+}
+.header span{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.content{
+    padding: 50px;
+    position: absolute;
+    z-index: 1;
+}
+#tweet{
+    border-radius: 50px;
+    background-color: rgb(12, 162, 255);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    color: rgb(253, 251, 251);
+    width: 20%;
+    margin-top: 25px;
+}
+#tweet:hover{
+    box-shadow: .1px .1px 5px 0.1px rgb(12, 113, 255);
+    cursor: pointer;
+}
+#msg{
+    background-color: rgb(12, 162, 255);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 25px;
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+}
+#content-two{
+    padding: 10px 50px;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#content-two #msg_box{
+        width: 600px;
+        height: 85%;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px;
+}
+#content-two #msg_box input{
+    padding: 5px;
+    font-size: 15px;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+#next{
+    background-color: rgb(173, 173, 173);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 8px 15px; 
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    border: none;
+}
+#next:active{
+    background-color: gray;
+}
+
+
+
+
+
+
+/********************** RESPONSIVE  ********************************************* */
+
+@media screen and (max-width:750px){
+
+#bottom-bar{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        z-index: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid rgba(90, 90, 90, 0.247);
+    }
+    #bottom-bar{
+        font-size: 23px;
+    }
+    
+
+/* *********************     PROFILE    *************************** */
+
+#profile{
+    display:block;
+    height: 40px;
+    cursor: pointer;
+}
+.header{
+    position: sticky;
+    top: 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.247);
+}
+.header span{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.content{
+    padding: 20px;
+}
+#tweet{
+    border-radius: 50px;
+    background-color: rgb(12, 162, 255);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    color: rgb(253, 251, 251);
+    width: 50%;
+    margin-top: 25px;
+}
+#tweet:hover{
+    box-shadow: .1px .1px 5px 0.1px rgb(12, 113, 255);
+    cursor: pointer;
+}#msg{
+    background-color: rgb(12, 162, 255);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 25px;
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+}
+#content-two{
+    padding: 10px;
+}
+#content-two #msg_box{
+        width: 90vw;
+        height: 85%;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px;
+}
+}
+
+
+</style>
+<body>
+    
+<!-----------------    HEADER   --------->
+
+<div class="header">
+    <div id="profile"><img src="profile.jpg" height="100%" style="border-radius: 50%;"></div><span>Messages</span><i class="fa-regular fa-moon" id="darkmode" style="font-size: 20px;"></i>
+</div>
+
+
+<!-----------------    BOTTOM BAR MENU   -------------->
+
+<div id="bottom-bar">
+    <a href="index.html" style="color: var(--text-white);"><i class="fa-solid fa-house" id="icon"></i></a>
+    <a href="firstPage.html" style="color: var(--text-white);"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <i class="fa-regular fa-bell" id="icon"></i>
+    <a href="inbox.html" style="color: var(--text-white);"><i class="fa-regular fa-envelope" id="icon"></i></a>
+</div>
+
+
+
+
+
+
+<!-----------------   Main CONTENT     ------------------------ -->
+
+<div class="content">
+    <h1 style="font-family: Arial, Helvetica, sans-serif;letter-spacing: 0.5px;">Welcome to your <br> inbox!</h1>
+    <p style="color: rgb(89, 88, 88);font-size: 14px;margin-top: 5px;">Drop a line, share Tweet and more with private conversation between you and other on Twitter.</p>
+    <button id="tweet">Write a Tweet</button>
+    <i class="fa-regular fa-envelope" id="msg"></i>
+</div>
+
+
+<div  id="content-two">
+<div id="msg_box">
+    <div style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding-bottom: 15px;">
+        <i class="fa-solid fa-xmark" style="font-size: 20px;" id="close_btn"></i><h3>New message</h3><button id="next">Next</button>
+    </div>
+    <i class="fa-solid fa-magnifying-glass" style="font-size: 15px; color: rgb(52, 164, 255);"></i><input type="text" placeholder="Search people">
+    <div style="height: 0.5px;width: 100%;background-color: rgba(128, 128, 128, 0.432);margin-top: 2px;"></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var tweet_btn = document.getElementById("tweet");
+    tweet_btn.onclick = function(){
+        document.getElementById("content-two").style.display = "flex";
+        document.body.style.backgroundColor = "gray";
+        document.getElementById("bottom-bar").style.backgroundColor = "gray";
+    }
+
+    var close_btn  = document.getElementById("close_btn");
+    close_btn.onclick = function(){
+        document.getElementById("content-two").style.display = "none";
+        document.body.style.backgroundColor = "var(--black-background)";
+        document.getElementById("bottom-bar").style.backgroundColor = "white";
+    }
+
+</script>
+</body>
+</html>
